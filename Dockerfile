@@ -1,7 +1,6 @@
 FROM ruby:2.1.10
 
-RUN apt-get -yy install libmysqld-dev libpq-dev libsqlite3-dev
-RUN apt-get -yy install nginx nodejs
+RUN apt-get update -qq && apt-get install -y nginx build-essential nodejs libmagic-dev libmagic1
 
 ENV PORT 5000
 
